@@ -13,6 +13,7 @@ int main()
 
   shapeArray_t shapesToScale;
   size_t shapesCount = 0;
+  std::shared_ptr< double[] > args;
 
   while (!std::cin.eof() && command != "SCALE")
   {
@@ -22,7 +23,7 @@ int main()
 
       if (command == "RECTANGLE")
       {
-        std::shared_ptr< double[] > args = getArgsFromConsole(4);
+        args = getArgsFromConsole(4);
 
         point_t leftCorner = { args[0], args[1] };
         point_t rightCorner = { args[2], args[3] };
@@ -36,7 +37,7 @@ int main()
       }
       else if (command == "REGULAR")
       {
-        std::shared_ptr< double[] > args = getArgsFromConsole(6);
+        args = getArgsFromConsole(6);
 
         point_t firstPoint = { args[0], args[1] };
         point_t secondPoint = { args[2], args[3] };
@@ -46,7 +47,7 @@ int main()
       }
       else if (command == "SQUARE")
       {
-        std::shared_ptr< double[] > args = getArgsFromConsole(3);
+        args = getArgsFromConsole(3);
 
         point_t leftCorner = { args[0], args[1] };
         double sideLength = args[2];
@@ -61,7 +62,7 @@ int main()
           return 2;
         }
 
-        std::shared_ptr< double[] > args = getArgsFromConsole(3);
+        args = getArgsFromConsole(3);
 
         point_t dot = { args[0], args[1] };
         double scaleCoefficient = args[2];
