@@ -11,6 +11,7 @@ namespace bavykin
   class Regular : public Shape
   {
   public:
+    Regular() = default;
     Regular(const point_t& firstPoint, const point_t& secondPoint, const point_t& thirdPoint);
     ~Regular() override = default;
 

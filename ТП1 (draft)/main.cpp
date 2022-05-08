@@ -1,9 +1,9 @@
-﻿#include "Rectangle.h"
+﻿#include <iomanip>
+#include <iostream>
+#include "Rectangle.h"
 #include "Regular.h"
 #include "ShapesUtils.h"
 #include "Square.h"
-#include <iomanip>
-#include <iostream>
 
 using namespace bavykin;
 

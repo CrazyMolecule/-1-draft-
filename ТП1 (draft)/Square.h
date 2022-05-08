@@ -8,6 +8,7 @@ namespace bavykin
   class Square : public Shape
   {
   public:
+    Square() = default;
     Square(point_t leftCorner, double sideLength);
     ~Square() override = default;
 
