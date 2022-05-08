@@ -1,7 +1,10 @@
 #ifndef SHAPES_UTILS_H
 #define SHAPES_UTILS_H
-#include "base-types.h"
 #include <memory>
+#include <iostream>
+#include <memory>
+#include <iomanip>
+#include "base-types.h"
 #include "Shape.h"
 
 namespace bavykin

@@ -1,5 +1,6 @@
 #ifndef SQUARE_H
 #define SQUARE_H
+#include <stdexcept>
 #include "Shape.h"
 
 namespace bavykin

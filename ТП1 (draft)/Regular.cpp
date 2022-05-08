@@ -1,7 +1,4 @@
-#include <stdexcept>
-#include <cmath>
 #include "Regular.h"
-#include <iostream>
 
 namespace bavykin
 {

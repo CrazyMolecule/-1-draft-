@@ -1,4 +1,3 @@
-#include <stdexcept>
 #include "Square.h"
 
 namespace bavykin

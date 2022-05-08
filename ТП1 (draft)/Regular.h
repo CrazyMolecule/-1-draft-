@@ -1,7 +1,10 @@
 #ifndef REGULAR_H
 #define REGULAR_H
-#include "Shape.h"
 #include <cstddef>
+#include <iostream>
+#include <stdexcept>
+#include <cmath>
+#include "Shape.h"
 
 namespace bavykin
 {

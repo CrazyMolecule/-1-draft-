@@ -1,4 +1,3 @@
-#include <stdexcept>
 #include "Rectangle.h"
 
 namespace bavykin

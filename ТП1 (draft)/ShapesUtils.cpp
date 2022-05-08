@@ -1,7 +1,4 @@
 #include "ShapesUtils.h"
-#include <iostream>
-#include <memory>
-#include <iomanip>
 
 namespace bavykin
 {
