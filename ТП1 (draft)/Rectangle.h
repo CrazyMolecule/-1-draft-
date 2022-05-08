@@ -8,8 +8,9 @@ namespace bavykin
   class Rectangle : public Shape
   {
   public:
+    Rectangle() = default;
     Rectangle(const point_t& leftCorner, const point_t& rightCorner);
-    ~Rectangle() = default;
+    ~Rectangle() override = default;
 
     double getArea() const override;
     rectangle_t getFrameRect() const override;

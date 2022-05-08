@@ -31,7 +31,7 @@ namespace bavykin
 
   std::shared_ptr< double[] > getArgsFromConsole(size_t argsCount)
   {
-    double arg;
+    double arg = 0;
     std::shared_ptr< double[] > args;
 
     for (size_t currentCount = 0; currentCount < argsCount; currentCount++)
@@ -63,8 +63,10 @@ namespace bavykin
     {
       rectangle_t shapeFrame = (*shapes[i]).getFrameRect();
 
-      point_t leftCorner = { shapeFrame.m_Pos.m_X - shapeFrame.m_Width / 2, shapeFrame.m_Pos.m_Y - shapeFrame.m_Height / 2 };
-      point_t rightCorner = { shapeFrame.m_Pos.m_X + shapeFrame.m_Width / 2, shapeFrame.m_Pos.m_Y + shapeFrame.m_Height / 2 };
+      point_t leftCorner = {shapeFrame.m_Pos.m_X - shapeFrame.m_Width / 2,
+                            shapeFrame.m_Pos.m_Y - shapeFrame.m_Height / 2};
+      point_t rightCorner = {shapeFrame.m_Pos.m_X + shapeFrame.m_Width / 2,
+                             shapeFrame.m_Pos.m_Y + shapeFrame.m_Height / 2};
 
       std::cout << std::setprecision(1) << std::fixed << " " << leftCorner.m_X << " " << leftCorner.m_Y;
       std::cout << std::setprecision(1) << std::fixed << " " << rightCorner.m_X << " " << rightCorner.m_Y;

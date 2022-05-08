@@ -1,9 +1,9 @@
-﻿#include <iostream>
-#include <iomanip>
-#include "Rectangle.h"
+﻿#include "Rectangle.h"
 #include "Regular.h"
-#include "Square.h"
 #include "ShapesUtils.h"
+#include "Square.h"
+#include <iomanip>
+#include <iostream>
 
 using namespace bavykin;
 
@@ -13,7 +13,9 @@ int main()
 
   shapeArray_t shapesToScale;
   size_t shapesCount = 0;
-  std::shared_ptr< double[] > args = std::make_unique< double[] >(0.0);
+
+  std::shared_ptr< double[] > args;
+  shapePtr_t tmp;
 
   while (!std::cin.eof() && command != "SCALE")
   {
@@ -28,18 +30,8 @@ int main()
         point_t leftCorner = { args[0], args[1] };
         point_t rightCorner = { args[2], args[3] };
 
-        double rx = rightCorner.m_X;
-        double lx = leftCorner.m_X;
-
-        double ry = rightCorner.m_Y;
-        double ly = leftCorner.m_Y;
-
-        if (rx < lx || ry < ly)
-        {
-          throw std::logic_error("Invalid values of corners.");
-        }
-
-        addShape(shapesToScale, shapesCount++, shapePtr_t(new Rectangle(leftCorner, rightCorner)));
+        tmp = shapePtr_t(new Rectangle(leftCorner, rightCorner));
+        addShape(shapesToScale, shapesCount++, tmp);
       }
       else if (command == "REGULAR")
       {
@@ -75,7 +67,7 @@ int main()
 
         if (scaleCoefficient < 0)
         {
-          std::cerr <<  "Scale can't be negative." << std::endl;
+          std::cerr << "Scale can't be negative." << std::endl;
           return 1;
         }
 

@@ -2,17 +2,19 @@
 
 namespace bavykin
 {
-  Rectangle::Rectangle(const point_t& leftCorner, const point_t& rightCorner)
+  bavykin::Rectangle::Rectangle(const point_t& leftCorner, const point_t& rightCorner)
   {
-    double width = std::abs(leftCorner.m_X - rightCorner.m_X);
-    double height = std::abs(leftCorner.m_Y - rightCorner.m_Y);
+    double width = rightCorner.m_X - leftCorner.m_X;
+    double height = rightCorner.m_Y - leftCorner.m_Y;
     double posX = std::abs(rightCorner.m_X + leftCorner.m_X) / 2;
     double posY = std::abs(leftCorner.m_Y + rightCorner.m_Y) / 2;
 
-    m_Rect.m_Width = width;
-    m_Rect.m_Height = height;
-    m_Rect.m_Pos.m_X = posX;
-    m_Rect.m_Pos.m_Y = posY;
+    if (width < 0 || height < 0)
+    {
+      throw std::logic_error("Invalid values of corners.");
+    }
+
+    m_Rect = { width, height, { posX, posY } };
   }
 
   double Rectangle::getArea() const
