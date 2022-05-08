@@ -23,4 +23,5 @@ namespace bavykin
 
   void printShapesAreaAndFrame(const shapeArray_t& shapes, size_t count);
 }
+
 #endif

@@ -9,6 +9,7 @@ namespace bavykin
   {
   public:
     Square(point_t leftCorner, double sideLength);
+    ~Square() = default;
 
     double getArea() const override;
     rectangle_t getFrameRect() const override;

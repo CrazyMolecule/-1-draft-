@@ -12,6 +12,7 @@ namespace bavykin
   {
   public:
     Regular(const point_t& firstPoint, const point_t& secondPoint, const point_t& thirdPoint);
+    ~Regular() = default;
 
     double getArea() const override;
     rectangle_t getFrameRect() const override;
